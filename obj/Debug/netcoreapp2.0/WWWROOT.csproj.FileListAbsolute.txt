@@ -1,0 +1,10 @@
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/bin/Debug/netcoreapp2.0/WWWROOT.deps.json
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/bin/Debug/netcoreapp2.0/WWWROOT.runtimeconfig.json
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/bin/Debug/netcoreapp2.0/WWWROOT.runtimeconfig.dev.json
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/bin/Debug/netcoreapp2.0/WWWROOT.dll
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/bin/Debug/netcoreapp2.0/WWWROOT.pdb
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/obj/Debug/netcoreapp2.0/WWWROOT.csproj.CoreCompileInputs.cache
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/obj/Debug/netcoreapp2.0/WWWROOT.AssemblyInfoInputs.cache
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/obj/Debug/netcoreapp2.0/WWWROOT.AssemblyInfo.cs
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/obj/Debug/netcoreapp2.0/WWWROOT.dll
+/Users/warddurossette/Desktop/dev/durossette.com/WWWROOT/obj/Debug/netcoreapp2.0/WWWROOT.pdb
