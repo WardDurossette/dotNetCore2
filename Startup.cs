@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using WWWROOT.Models;
 
 namespace WWWROOT
 {
@@ -14,17 +16,7 @@ namespace WWWROOT
         public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
 
-          // Manually create the IConfigurationBuilder object
-          var myConfig = new ConfigurationBuilder()
-            .SetBasePath(env.ContentRootPath)
-            .AddEnvironmentVariables()
-            .AddJsonFile("appsettings.json")
-            .AddJsonFile("appsettings.Development.json")
-            .Build();
-
-          //Configuration = configuration;
-          Configuration = myConfig;
-
+          Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
