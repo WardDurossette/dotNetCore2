@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace WWWROOT.Models
 {
   
-  public class BooksDBContext : DbContext
+  public class BooksDbContext : DbContext
   {
     
     public DbSet<Book> Books { get;set; }
@@ -13,7 +13,9 @@ namespace WWWROOT.Models
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
 
-      optionsBuilder.UseSqlite("Filename=./BooksWeb.db");
+      optionsBuilder.UseSqlite("Data Source=./BooksWeb.db");
+
+    
 
     }
 

@@ -22,9 +22,12 @@ namespace WWWROOT.Controllers
         public IActionResult Index()
         {
 
-          using (var dbContext = new BooksDBContext()) {
+          using (var dbContext = new BooksDbContext()) {
 
-            var books = dbContext.Books.ToList();
+
+            dbContext.Database.EnsureCreated();
+
+            List<Book> books = dbContext.Books.ToList();;
 
             return View(books);
 
