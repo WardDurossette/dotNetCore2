@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace WWWROOT.Models
 {
 
-  public class Books
+  public class Book
   {
     [Key]
     public int BookId {get;set;}

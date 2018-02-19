@@ -21,7 +21,17 @@ namespace WWWROOT.Controllers
 
         public IActionResult Index()
         {
-            return View();
+
+          using (var dbContext = new BooksDBContext()) {
+
+            var books = dbContext.Books.ToList();
+
+            return View(books);
+
+          }
+
+
+           
         }
 
         public IActionResult About()
