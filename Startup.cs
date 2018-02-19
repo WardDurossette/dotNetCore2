@@ -15,8 +15,7 @@ namespace WWWROOT
     {
         public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
-
-          Configuration = configuration;
+         Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -26,8 +25,10 @@ namespace WWWROOT
         {
             services.AddSingleton(Configuration);
             services.AddMvc();
-            services.AddEntityFrameworkSqlite();
-            
+            // services.AddEntityFrameworkSqlite();
+            services.AddDbContext<BooksDbContext>(options =>
+              options.UseSqlite(Configuration.GetConnectionString("ConnStr_BookDB"))
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

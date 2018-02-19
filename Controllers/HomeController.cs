@@ -21,32 +21,21 @@ namespace WWWROOT.Controllers
 
         public IActionResult Index()
         {
-
-          using (var dbContext = new BooksDbContext()) {
-
-
-            dbContext.Database.EnsureCreated();
-
-            List<Book> books = dbContext.Books.ToList();;
-
-            return View(books);
-
-          }
-
-
-           
+          return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+          ViewData["Message"] = "Your application description page.";
 
          
           string sLoggingLevel = _config.GetValue<string>("Logging:LogLevel:Default");
-
           @ViewBag.LogLevel = sLoggingLevel;
 
-            return View();
+          string sSecretTest = _config["ConnectionString_Portal"];
+          @ViewBag.ConnectionString_Portal = sSecretTest;
+          
+          return View();
         }
 
         public IActionResult Contact()
