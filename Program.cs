@@ -26,14 +26,17 @@ namespace WWWROOT
       .ConfigureAppConfiguration((builderContext, config) => {
         IHostingEnvironment env = builderContext.HostingEnvironment;
 
+        // First we load appsettings, overloaded by appsettings.EnvironmentName
         config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
           .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
           
-        config.AddEnvironmentVariables();
+        // If we are dev, use the usersecrets
         if (env.IsDevelopment())
         {
             config.AddUserSecrets<Startup>();
         }
+        // Environment variables trump all others
+        config.AddEnvironmentVariables();
       })
       .UseStartup<Startup>()
       .Build();
