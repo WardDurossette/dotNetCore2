@@ -25,9 +25,8 @@ namespace WWWROOT
         {
             services.AddSingleton(Configuration);
             services.AddMvc();
-            // services.AddEntityFrameworkSqlite();
             services.AddDbContext<BooksDbContext>(options =>
-              options.UseSqlite(Configuration.GetConnectionString("ConnStr_BookDB"))
+              options.UseSqlite("Data Source=BooksWeb.db")
             );
         }
 
