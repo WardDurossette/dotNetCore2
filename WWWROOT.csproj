@@ -13,7 +13,7 @@
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
-  <Target Name="CopySqliteDBToOutput" AfterTargets="AfterBuild">
-    <Copy SourceFiles="./BooksWeb.db" DestinationFolder="$(OutDir)" />
-  </Target>
+  <ItemGroup>
+    <Content Include="BooksWeb.db" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>
