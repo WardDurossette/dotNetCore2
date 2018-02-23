@@ -32,6 +32,7 @@ namespace WWWROOT.Controllers
           ViewData["Message"] = "Your application description page.";
 
           @ViewBag.EnvironmentName = _hosting.EnvironmentName;
+          @ViewBag.IsDevelopment = _hosting.IsDevelopment();
 
           string sLoggingLevel = _config.GetValue<string>("Logging:LogLevel:Default");
           @ViewBag.LogLevel = sLoggingLevel;
