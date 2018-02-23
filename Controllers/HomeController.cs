@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Hosting;
 using WWWROOT.Models;
 
 namespace WWWROOT.Controllers
@@ -13,10 +14,12 @@ namespace WWWROOT.Controllers
     {
 
       IConfiguration _config { get; }
+      IHostingEnvironment _hosting { get; }
 
-      public HomeController(IConfiguration config)
+      public HomeController(IConfiguration config, IHostingEnvironment hosting)
       {
         _config = config;
+        _hosting = hosting;
       }
 
         public IActionResult Index()
@@ -28,7 +31,8 @@ namespace WWWROOT.Controllers
         {
           ViewData["Message"] = "Your application description page.";
 
-         
+          @ViewBag.EnvironmentName = _hosting.EnvironmentName;
+
           string sLoggingLevel = _config.GetValue<string>("Logging:LogLevel:Default");
           @ViewBag.LogLevel = sLoggingLevel;
 
