@@ -47,8 +47,28 @@ namespace WWWROOT.Controllers
         return NotFound();
       }
       return View(book);
-
     }
+
+
+    [HttpGet]
+    public IActionResult Edit(int? Id)
+    {
+      if (Id == null)
+      {
+        return NotFound();
+      }
+
+      var book = _dbContext.Books.SingleOrDefault(m => m.BookId == Id);
+      if (book == null)
+      {
+        return NotFound();
+      }
+      return View(book);
+    }
+
+
+
+
 
   }
 
