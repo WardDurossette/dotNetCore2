@@ -10,7 +10,7 @@ using WWWROOT.Models;
 namespace WWWROOT.Controllers
 {
 
-  public class BookController : Controller
+  public class BookAdminController : Controller
   {
 
     // Class member variables and properties
@@ -18,7 +18,7 @@ namespace WWWROOT.Controllers
 
     private readonly BooksDbContext _dbContext;
 
-    public BookController(IConfiguration config, BooksDbContext context)
+    public BookAdminController(IConfiguration config, BooksDbContext context)
     {
       _config = config;
       _dbContext = context;
