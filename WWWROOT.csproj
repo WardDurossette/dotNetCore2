@@ -14,6 +14,6 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2"/>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BooksWeb.db" CopyToPublishDirectory="PreserveNewest"/>
+    <Content Include="Data\BooksWeb.db" CopyToOutputDirectory="PreserveNewest"/>
   </ItemGroup>
 </Project>
