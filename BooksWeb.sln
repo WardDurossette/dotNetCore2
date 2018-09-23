@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WWWROOT", "WWWROOT.csproj", "{9CEDEEE1-2245-4AA2-BBBE-7B2A4AC86924}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksWeb", "BooksWeb.csproj", "{9CEDEEE1-2245-4AA2-BBBE-7B2A4AC86924}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

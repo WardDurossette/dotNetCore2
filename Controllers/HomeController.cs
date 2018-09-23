@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
-using WWWROOT.Models;
+using BooksWeb.Entities;
 
-namespace WWWROOT.Controllers
+namespace BooksWeb.Controllers
 {
     public class HomeController : Controller
     {

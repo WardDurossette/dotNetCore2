@@ -1,12 +1,38 @@
-@model List<WWWROOT.Models.Book>
+@model BooksWeb.Models.BooksViewModel
 
 <h3>Book Admin</h3>
+<!-- BEGIN SEARCH AREA -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1 class="panel-title">Search for Books</h1>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      @Html.LabelFor(m => m.SearchEntity.BookTitle, "Book Title")
+      @Html.TextBoxFor(m => m.SearchEntity.BookTitle, new { @class="form-control" })
+    </div>
+  </div>
+  <div class="panel-footer">
+    <button id="btnSearch"
+      class="btn btn-sm btn-primary"
+      data-bkwb-action="search">
+      <i class="glyphicon glyphicon-search"></i>
+      &nbsp;Search
+      </button>
+  </div>
+</div>
+<!-- END SEARCH AREA -->
+
+
+<!-- BEGIN RECORDS AREA -->
+<!-- END RECORDS AREA -->
+
 <div class="container">
   <div class="row">
     <div class="col-md-3">
       <hr />
       <ul>
-      @foreach(var item in Model)
+      @foreach(var item in Model.Books)
       {
         <li><a asp-action="Details" asp-route-id="@item.BookId">@Html.DisplayFor(ModelItem => item.BookTitle)</a></li>
       }

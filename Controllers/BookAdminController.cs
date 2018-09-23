@@ -5,9 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using WWWROOT.Models;
+using BooksWeb.Entities;
+using BooksWeb.Models;
 
-namespace WWWROOT.Controllers
+namespace BooksWeb.Controllers
 {
 
   public class BookAdminController : Controller
@@ -29,8 +30,13 @@ namespace WWWROOT.Controllers
     {
 
       List<Book> books = _dbContext.Books.ToList();
+      Book SearchEntity = new Book();
 
-      return View(books);
+      BooksViewModel vm = new BooksViewModel();
+      vm.SearchEntity = SearchEntity;
+      vm.Books = books;
+
+      return View(vm);
 
     }
 

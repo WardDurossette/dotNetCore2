@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/WWWROOT.csproj"
+                "${workspaceFolder}/BooksWeb.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

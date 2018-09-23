@@ -1,6 +1,6 @@
 using System;
 
-namespace WWWROOT.Models
+namespace BooksWeb.Entities
 {
     public class ErrorViewModel
     {

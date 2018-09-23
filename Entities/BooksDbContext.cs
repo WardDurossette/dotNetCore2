@@ -2,7 +2,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace WWWROOT.Models
+namespace BooksWeb.Entities
 {
   
   public class BooksDbContext : DbContext

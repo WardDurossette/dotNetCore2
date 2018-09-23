@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace WWWROOT.Models
+namespace BooksWeb.Entities
 {
 
   public class Book

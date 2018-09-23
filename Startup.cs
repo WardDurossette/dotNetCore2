@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using WWWROOT.Models;
+using BooksWeb.Entities;
 
-namespace WWWROOT
+namespace BooksWeb
 {
     public class Startup
     {

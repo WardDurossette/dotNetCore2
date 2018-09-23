@@ -1,7 +1,7 @@
 // Book Service Interface
 using System;
 using System.Collections.Generic;
-using WWWROOT.Models;
+using BooksWeb.Entities;
 
 public interface IBookService
 {
