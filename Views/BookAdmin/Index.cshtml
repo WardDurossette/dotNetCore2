@@ -25,6 +25,39 @@
 
 
 <!-- BEGIN RECORDS AREA -->
+<div class="table-responsive">
+  <table class="table table-condensed table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th class="bkwb-action-button-column">
+          Action
+        </th>
+        <th>Book Title</th>
+        <th>Year Published</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach(var item in Model.Books)
+      {
+        <tr>
+          <td class="bkwb-action-button-column">
+            <a asp-action="Details" asp-route-id="@item.BookId" 
+              class="btn btn-default btn-sm">
+              <i class="glyphicon glyphicon-edit"></i>
+              </a>
+          </td>
+        <td>
+          @item.BookTitle
+        </td>
+        <td>
+          @item.PublishYear
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+
+</div>
 <!-- END RECORDS AREA -->
 
 <div class="container">
@@ -32,10 +65,7 @@
     <div class="col-md-3">
       <hr />
       <ul>
-      @foreach(var item in Model.Books)
-      {
-        <li><a asp-action="Details" asp-route-id="@item.BookId">@Html.DisplayFor(ModelItem => item.BookTitle)</a></li>
-      }
+      
       </ul>
       <hr />
     </div>
